@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taekwondo Evolution Zenith</title>
+    <style>
+      @font-face {
+        font-family: "ZenithFont";
+        src: url("assets/font.ttf") format("truetype");
+      }
+
+      :root {
+        --bg: #fff;
+        --text: #111;
+        --header-bg: #000;
+        --header-text: #fff;
+        --highlight: #ffd700;
+        --nav: #ffd700;
+        --post-bg: #f5f5f5;
+      }
+
+      body.dark-mode {
+        --bg: #111;
+        --text: #fff;
+        --header-bg: #222;
+        --header-text: #ffd700;
+        --highlight: #ffc107;
+        --nav: #fff;
+        --post-bg: #222;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        transition: background 0.3s, color 0.3s;
+      }
+
+      a {
+        color: var(--highlight);
+        text-decoration: none !important;
+        -webkit-tap-highlight-color: transparent;
+        color: inherit;
+        cursor: pointer;
+      }
+
+      a:visited {
+        color: var(--highlight);
+      }
+
+      a:focus {
+        outline: none;
+      }
+
+      a:active {
+        color: var(--highlight);
+      }
+
+      a:hover {
+        color: var(--highlight);
+      }
+
+      header {
+        background-color: var(--header-bg);
+        color: var(--header-text);
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      header a.logo-link img {
+        height: 60px;
+      }
+
+      nav {
+        cursor: default;
+      }
+
+      nav .nav-link {
+        color: var(--nav);
+        margin: 0 1em;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      nav .nav-link:hover,
+      nav .nav-link:focus,
+      nav .nav-link:active {
+        color: var(--highlight);
+      }
+
+      .banner {
+        background: url("assets/banner.png") no-repeat center center;
+        background-size: cover;
+        height: 400px;
+        position: relative;
+      }
+
+      .banner::after {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      .banner-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--text);
+        text-align: center;
+        z-index: 2;
+      }
+
+      .banner-text h1 {
+        font-family: "ZenithFont" !important;
+        font-size: 3em;
+        color: var(--highlight);
+      }
+
+      .banner-text p {
+        font-family: "ZenithFont" !important;
+        color: #fff !important;
+      }
+
+      .section {
+        padding: 2em;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .section h2 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+        color: var(--text);
+      }
+
+      .blog-post {
+        background: var(--post-bg);
+        padding: 1em;
+        margin-bottom: 1em;
+        border-left: 5px solid var(--highlight);
+      }
+
+      .blog-post h3 {
+        margin-bottom: 0.5em;
+      }
+
+      #footer {
+        background-color: var(--header-bg);
+        color: var(--header-text);
+        padding: 2em;
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-template-areas: "a1 a2";
+      }
+
+      #contacto {
+        padding: 0 1em;
+        grid-area: a1;
+      }
+
+      #rr {
+        grid-area: a2;
+        display: grid;
+        place-items: center;
+        text-align: center;
+      }
+
+      #toggle-theme {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 0.5em 1em;
+        background: var(--highlight);
+        border: none;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        opacity: 0.5;
+        z-index: 1001;
+      }
+
+      #contacto a {
+        color: var(--nav);
+        text-decoration: none;
+      }
+      #contacto a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="inicio"></section>
+
+    <header>
+      <a href="assets/logo.png" class="logo-link">
+        <img src="assets/logo.png" alt="Zenith Logo" />
+      </a>
+      <nav>
+        <span class="nav-link" data-target="inicio">Inicio</span>
+        <span class="nav-link" data-target="blog">Blog</span>
+        <span class="nav-link" data-target="contacto">Contacto</span>
+      </nav>
+    </header>
+
+    <a href="assets/banner.png">
+      <div class="banner">
+        <div class="banner-text">
+          <h1>Taekwondo Evolution Zenith</h1>
+          <p>¡Disciplina, energía y evolución!</p>
+        </div>
+      </div>
+    </a>
+
+    <section class="section" id="blog">
+      <h2>Noticias y Blog</h2>
+      <div class="blog-post">
+        <h3>🎉 Inicio de clases: 28 de Julio</h3>
+        <p>
+          Te esperamos en nuestra nueva escuela matutina. ¡Sin costo de
+          inscripción hasta el 1ro de septiembre!
+        </p>
+      </div>
+      <div class="blog-post">
+        <h3>💪 Beneficios del Taekwondo para niños y adultos</h3>
+        <p>
+          Mejora la concentración, autoestima y condición física con nuestras
+          clases diseñadas para todas las edades.
+        </p>
+      </div>
+      <div class="blog-post">
+        <h3>🥋 Horarios disponibles</h3>
+        <p>
+          Clases de 3 o 5 días a la semana. Consulta horarios y precios en la
+          imagen promocional o contáctanos.
+        </p>
+      </div>
+    </section>
+
+    <div id="footer">
+      <div id="contacto">
+        <h2>Contacto</h2>
+        <p>
+          <strong>Ubicación:</strong>
+          <a href="https://www.google.com/maps/dir//Taekwondo+Evolution+Academy+Champions,+S.+Pablo+Tecalco+16,+San+Francisco+Cuautliquixca,+55760+Tec%C3%A1mac+de+Felipe+Villanueva,+M%C3%A9x./data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x85d1ed0d96d6b925:0xd4d7bb21c0d720e0?sa=X&ved=1t:57443&ictx=111">Taekwondo Evolution Academy Champions, San
+            Pablo</a>
+        </p>
+        <p>
+          <strong>Correo:</strong>
+          <a href="mailto:tkdevozenith@gmail.com">tkdevozenith@gmail.com</a>
+        </p>
+        <p>
+          <strong>Teléfono:</strong>
+          <a href="tel:+000000000000">+00 00 0000 0000</a>
+        </p>
+      </div>
+      <div id="rr">
+        <p>
+          &copy; 2025 Taekwondo Evolution Zenith. Todos los derechos reservados.
+        </p>
+      </div>
+    </div>
+
+    <button id="toggle-theme">Modo oscuro</button>
+
+    <script>
+      const toggle = document.getElementById("toggle-theme");
+      toggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        toggle.textContent = document.body.classList.contains("dark-mode")
+          ? "Modo claro"
+          : "Modo oscuro";
+      });
+
+      // Navegación por span
+      document.querySelectorAll(".nav-link").forEach((el) => {
+        el.addEventListener("click", () => {
+          const target = document.getElementById(el.dataset.target);
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
