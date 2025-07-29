@@ -39,6 +39,10 @@ body {
 span {
   text-decoration: none !important;
   -webkit-tap-highlight-color: transparent !important;
+   user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 button {
@@ -88,6 +92,10 @@ header a.logo-link img {
 
 nav {
   cursor: default;
+   user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 nav .nav-link {
@@ -97,6 +105,10 @@ nav .nav-link {
   font-weight: bold;
   cursor: pointer;
   transition: color 0.3s;
+   user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 nav .nav-link:hover,
