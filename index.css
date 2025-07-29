@@ -36,10 +36,20 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
+span {
+  text-decoration: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+button {
+  text-decoration: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
 a {
   color: var(--highlight);
   text-decoration: none !important;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent !important;
   color: inherit;
   cursor: pointer;
 }

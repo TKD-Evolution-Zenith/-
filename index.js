@@ -6,7 +6,6 @@ toggle.addEventListener("click", () => {
     : "Modo oscuro";
 });
 
-// Navegación por span
 document.querySelectorAll(".nav-link").forEach((el) => {
   el.addEventListener("click", () => {
     const target = document.getElementById(el.dataset.target);
@@ -14,26 +13,6 @@ document.querySelectorAll(".nav-link").forEach((el) => {
       target.scrollIntoView({ behavior: "smooth" });
     }
   });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const element = document.getElementById("typed");
-  const text = element.textContent.trim();
-  element.textContent = "";
-
-  let index = 0;
-
-  typr = document.getElementById("type");
-
-  function typeWriter() {
-    if (index < text.length) {
-      typr.textContent += text.charAt(index);
-      index++;
-      setTimeout(typeWriter, 70);
-    }
-  }
-
-  typeWriter();
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -48,14 +27,4 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
-});
-
-document.getElementById("CV").addEventListener("click", function () {
-  var pdfUrl = "Assets/CV.pdf";
-  var a = document.createElement("a");
-  a.href = pdfUrl;
-  a.download = "Curriculum_Vitae_Alejandro_Torres_Herrera.pdf";
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
 });
