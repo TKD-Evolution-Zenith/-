@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <base href="/app/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taekwondo Evolution Zenith</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section id="inicio"></section>
+
+    <header>
+      <a href="assets/logo.png" class="logo-link">
+        <img src="assets/logo.png" alt="Zenith Logo" />
+      </a>
+      <nav>
+        <span class="nav-link" data-target="inicio">Inicio</span>
+        <span class="nav-link" data-target="blog">Blog</span>
+        <span class="nav-link" data-target="contacto">Contacto</span>
+      </nav>
+    </header>
+
+    <a href="assets/banner.png">
+      <div class="banner">
+        <div class="banner-text">
+          <h1>Taekwondo Evolution Zenith</h1>
+          <p>¡Disciplina, energía y evolución!</p>
+        </div>
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com/profile.php?id=61578517119878"
+            class="social-icons-a"
+            target="_blank"
+            title="Facebook"
+          >
+            <span class="icon fb"></span>
+          </a>
+          <a
+            href="https://www.instagram.com/tkd_evolution_zenith"
+            class="social-icons-a"
+            target="_blank"
+            title="Instagram"
+          >
+            <span class="icon ig"></span>
+          </a>
+          <a
+            href="https://wa.me/000000000"
+            class="social-icons-a"
+            target="_blank"
+            title="WhatsApp"
+          >
+            <span class="icon wa"></span>
+          </a>
+        </div>
+      </div>
+    </a>
+
+    <section class="section" id="blog">
+      <h2>Noticias y Blog</h2>
+      <div class="blog-post">
+        <h3>🎉 Inicio de clases: 28 de Julio</h3>
+        <p>
+          Te esperamos en nuestra nueva escuela matutina. ¡Sin costo de
+          inscripción hasta el 1ro de septiembre!
+        </p>
+      </div>
+      <div class="blog-post">
+        <h3>💪 Beneficios del Taekwondo para niños y adultos</h3>
+        <p>
+          Mejora la concentración, autoestima y condición física con nuestras
+          clases diseñadas para todas las edades.
+        </p>
+      </div>
+      <div class="blog-post">
+        <h3>🥋 Horarios disponibles</h3>
+        <p>
+          Clases de 3 o 5 días a la semana. Consulta horarios y precios en la
+          imagen promocional o contáctanos.
+        </p>
+      </div>
+    </section>
+
+    <div id="footer">
+      <div id="contacto">
+        <h2>Contacto</h2>
+        <p>
+          <strong>Ubicación:</strong>
+          <a
+            href="https://www.google.com/maps/dir//Taekwondo+Evolution+Academy+Champions,+S.+Pablo+Tecalco+16,+San+Francisco+Cuautliquixca,+55760+Tec%C3%A1mac+de+Felipe+Villanueva,+M%C3%A9x./data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x85d1ed0d96d6b925:0xd4d7bb21c0d720e0?sa=X&ved=1t:57443&ictx=111"
+            >Taekwondo Evolution Academy Champions, San Pablo</a
+          >
+        </p>
+        <p>
+          <strong>Correo:</strong>
+          <a href="mailto:tkdevozenith@gmail.com">tkdevozenith@gmail.com</a>
+        </p>
+        <p>
+          <strong>Teléfono:</strong>
+          <a href="tel:+000000000000">+00 00 0000 0000</a>
+        </p>
+      </div>
+      <div id="rr">
+        <p>
+          &copy; 2025 Taekwondo Evolution Zenith. Todos los derechos reservados.
+        </p>
+      </div>
+    </div>
+
+    <button id="toggle-theme">Modo oscuro</button>
+
+    <script src="index.js"></script>
+  </body>
+</html>
